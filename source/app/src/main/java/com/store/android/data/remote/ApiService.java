@@ -14,7 +14,7 @@ public interface ApiService {
 //    @POST("/api/token")
 //    Observable<LoginResponse> login(@Body LoginRequest request);
 
-    @POST("/v1/login")
+    @POST("/v1/account/login")
     Observable<ResponseWrapper<LoginResponse>> login(@Body LoginRequest request);
 
     @GET("/v1/account/profile")

@@ -16,7 +16,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class LoginViewModel extends BaseViewModel {
     public ObservableField<String> username = new ObservableField<>("admin");
-    public ObservableField<String> password = new ObservableField<>("admin123456");
+    public ObservableField<String> password = new ObservableField<>("admin123654");
 
     public LoginViewModel(Repository repository, MVVMApplication application) {
         super(repository, application);
