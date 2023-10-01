@@ -14,7 +14,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", "\"https://update.digibes.de/\""
+        buildConfigField "String", "BASE_URL", "\"https://spring-api-template.developteam.net\""
         buildConfigField "String", "UPDATE_URL", "\"https://update.digibes.de/qrlive/qrcode_random.txt\""
         javaCompileOptions {
             annotationProcessorOptions {

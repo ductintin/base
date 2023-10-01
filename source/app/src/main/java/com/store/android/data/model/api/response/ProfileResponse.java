@@ -1,19 +1,20 @@
 package com.store.android.data.model.api.response;
 
+
 import java.util.Date;
 
 import lombok.Data;
-
 @Data
-public class LoginResponse{
-//    @SerializedName("access_token")
-//    private String accessToken;
-
-    private Date expired;
+public class ProfileResponse {
+    private String avatar;
+    private String email;
     private String fullName;
     private int id;
+    private boolean isSuperAdmin;
     private int kind;
-    private String token;
+    private String lang;
+    private Date lastLogin;
+    private String phone;
     private String username;
 
 }

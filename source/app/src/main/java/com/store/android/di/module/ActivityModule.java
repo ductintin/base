@@ -12,6 +12,7 @@ import com.store.android.di.scope.ActivityScope;
 import com.store.android.ui.base.activity.BaseActivity;
 import com.store.android.ui.login.LoginViewModel;
 import com.store.android.ui.main.MainViewModel;
+import com.store.android.ui.profile.ProfileViewModel;
 import com.store.android.utils.GetInfo;
 
 import javax.inject.Named;
@@ -58,4 +59,13 @@ public class ActivityModule {
         ViewModelProviderFactory<LoginViewModel> factory = new ViewModelProviderFactory<>(LoginViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(LoginViewModel.class);
     }
+
+    @Provides
+    @ActivityScope
+    ProfileViewModel provideProfileViewModel(Repository repository, Context application) {
+        Supplier<ProfileViewModel> supplier = () -> new ProfileViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<ProfileViewModel> factory = new ViewModelProviderFactory<>(ProfileViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(ProfileViewModel.class);
+    }
+
 }
